@@ -31,10 +31,10 @@ app.use( commentRouter)
 app.use( postRouter)
 app.use( feedRouter)
 
-app.use("/static", express.static(path.join(__dirname, 'static')))
+app.use( express.static(path.join(__dirname, 'web/build')))
 app.use(express.static(path.join(__dirname, 'public')))
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3007
 app.listen(PORT, () => {
   console.log(`Example app server on port ${PORT}`)
 })
